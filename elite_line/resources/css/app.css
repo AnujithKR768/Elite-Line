@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* your animations */
+@layer utilities {
+  @keyframes slideDown {
+    from {
+      transform: translateY(-60px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideLeft {
+    from {
+      transform: translateX(-60px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-slideDown {
+    animation: slideDown 0.7s ease 1s forwards;
+  }
+
+  .animate-slideLeft {
+    animation: slideLeft 0.7s ease 2s forwards;
+  }
+}
